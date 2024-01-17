@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор номерных знаков</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="plate-type-select">
+    <label for="plate-type">Выберите тип номерного знака:</label>
+    <select id="plate-type" onchange="changePlateType()">
+      <option value="latvian">Латвийский</option>
+      <option value="ukrainian">Украинский</option>
+    </select>
+  </div>
+  
+  <div id="license-plate-container">
+    <div id="license-plate-frame">
+      <img id="eu-flag" src="C:\Users\Дан\Desktop\Генератор номеров\flag.png" alt="EU Flag">
+      <img id="ua-flag" src="C:\Users\Дан\Desktop\Генератор номеров\flag-ua.png" alt="UA Flag">
+      <div id="latvian-license-plate-text"></div>
+      <div id="ukrainian-license-plate-text">
+        <span id="ukrainian-region-code"></span>
+        <span id="ukrainian-license-numbers"></span>
+        <span id="ukrainian-series"></span>
+      </div>
+    </div>
+  </div>
+  
+  <div id="buttons-container">
+    <button onclick="generateLicensePlate()">Генерировать номер</button>
+    <button class="modal-button" onclick="openModal()">Регионы Украины</button>
+  </div>
+
+  <div id="saved-plates"></div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Регионы Украины</h2>
+	  <p>АА или КА: г. Киев</p>	
+	  <p>AB или KB: Винницкая область</p>
+	  <p>AC или KC: Волынская область</p>
+	  <p>AE или KE: Днепропетровская область</p>
+	  <p>AH или KH: Донецкая область</p>
+	  <p>AI или KI: Киевская область</p>
+	  <p>AM или KM: Житомирская область</p>
+	  <p>AO или KO: Закарпатская область</p>
+	  <p>AP или KP: Запорожская область</p>
+	  <p>AT или KT: Ивано-Франковская область</p>
+	  <p>AX или KX: Харьковская область</p>
+	  <p>BA или HA: Кировоградская область</p>
+	  <p>BB или HB: Луганская область</p>
+	  <p>BC или HC: Львовская область</p>
+	  <p>BE или HE: Николаевская область</p>
+	  <p>BH или HH: Одесская область</p>
+	  <p>BI или HI: Полтавская область</p>
+	  <p>BK или HK: Ровенская область</p>
+	  <p>BM или HM: Сумская область</p>
+	  <p>BO или HO: Тернопольская область</p>
+	  <p>BT или HT: Херсонская область</p>
+	  <p>BX или HX: Хмельницкая область</p>
+	  <p>CA или IA: Черкасская область</p>
+	  <p>CB или IB: Черниговская область</p>
+	  <p>CE или IE: Черновицкая область</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
